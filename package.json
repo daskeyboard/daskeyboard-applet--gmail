@@ -1,0 +1,47 @@
+{
+  "name": "q-applet-gmail",
+  "version": "1.0.0",
+  "description": "Das Keyboard Alerts for GMail",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Cory Kim",
+  "license": "MIT",
+  "dependencies": {
+    "daskeyboard-applet": "^2.7.14",
+    "request-promise": "^4.2.2"
+  },
+  "qConfig": {
+    "geometry": {
+      "width": 1,
+      "height": 1
+    },
+    "applet": {
+      "defaults": {}
+    },
+    "requirements": {
+      "authorization": {
+        "type": "oauth2"
+      },
+      "applet": {
+        "monitors": "string.."
+      }
+    }
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corykim/q-applet-gmail.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/corykim/q-applet-gmail/issues"
+  },
+  "homepage": "https://github.com/corykim/q-applet-gmail#readme"
+}
