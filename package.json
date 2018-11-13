@@ -35,14 +35,19 @@
     "applet": {
       "defaults": {}
     },
-    "requirements": {
-      "authorization": {
-        "type": "oauth2"
-      },
-      "applet": {
-        "monitors": "string.."
+    "authorization": {
+      "type": "oauth2"
+    },
+    "question": [
+      {
+        "key": "monitors",
+        "label": "Emails",
+        "help": "Enter the email with , to separate them",
+        "required": true,
+        "order": 1,
+        "controlType": "textbox"
       }
-    }
+    ]
   },
   "devDependencies": {
     "mocha": "^5.2.0"
