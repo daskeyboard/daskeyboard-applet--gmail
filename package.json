@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "description": "Das Keyboard Alerts for GMail",
   "icon": "assets/icon.png",
+  "developerRepoUrl": "https://github.com/daskeyboard",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
