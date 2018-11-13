@@ -4,8 +4,19 @@
   "displayName": "Gmail",
   "version": "1.0.0",
   "description": "Das Keyboard Alerts for GMail",
+  "longDescription": "Get emails alerts directly on a Das Keyboard Q device. Requires a Gmail account.",
   "icon": "assets/icon.png",
-  "developerRepoUrl": "https://github.com/daskeyboard",
+  "developerRepoUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail",
+  "officialProductName": "Gmail",
+  "image": "assets/misssssssssssssssssssssssssing",
+  "publisherName": "Das Keyboard",
+  "authorName": "Das Keyboard team",
+  "authorUrl": "https://twitter.com/daskeyboard",
+  "issuesUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail/issues",
+  "homepage": "https://github.com/daskeyboard/daskeyboard-applet-gmail",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+  "changelogUrl": "",
+  "qActionUrl": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -46,6 +57,5 @@
   "keywords": [],
   "bugs": {
     "url": "https://github.com/corykim/q-applet-gmail/issues"
-  },
-  "homepage": "https://github.com/corykim/q-applet-gmail#readme"
+  }
 }
