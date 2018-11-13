@@ -38,7 +38,7 @@
     "authorization": {
       "type": "oauth2"
     },
-    "question": [
+    "questions": [
       {
         "key": "monitors",
         "label": "Emails",
