@@ -1,7 +1,10 @@
 {
   "name": "q-applet-gmail",
+  "publisher": "Metadot Corporation",
+  "displayName": "Gmail",
   "version": "1.0.0",
   "description": "Das Keyboard Alerts for GMail",
+  "icon": "assets/icon.png",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
