@@ -13,7 +13,7 @@ describe('GmailAlerts', function () {
   describe('#run()', function () {
     it('should fail without an API key', function () {
       let test = new t.GmailAlerts();
-      test.run().then((result) => {
+      return test.run().then((result) => {
         return assert.fail("Should have failed.");
       }).catch((error) => {
         return assert.ok(error);
@@ -23,7 +23,7 @@ describe('GmailAlerts', function () {
     it('should get a message if it has an API key', function () {
       console.log("My API key is: " + apiKey);
       let test = new t.GmailAlerts();
-      test.processConfig({
+      return test.processConfig({
         authorization: {
           apiKey: apiKey
         },
@@ -33,7 +33,7 @@ describe('GmailAlerts', function () {
           }
         }
       }).then(() => {
-        test.run().then((signal) => {
+        return test.run().then((signal) => {
           console.log("Got signal: " + signal);
           return assert(signal === null || signal);
         }).catch(error => {
