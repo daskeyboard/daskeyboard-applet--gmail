@@ -31,9 +31,10 @@ class GmailAlerts extends q.DesktopApp {
       logger.info("Got body: " + JSON.stringify(json));
       if (json.messages && json.messages.length > 0) {
         logger.info("Got " + json.messages.length + " messages.");
-        return new q.Signal([
-          [new q.Point("#00FF00")]
-        ]);
+        return new q.Signal({ 
+          points: [[new q.Point("#00FF00")]],
+          name: `You have ${json.messages.length} unread messages.`,
+        });
       } else {
         return null;
       }

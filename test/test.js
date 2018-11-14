@@ -29,12 +29,13 @@ describe('GmailAlerts', function () {
         },
         applet: {
           user: {
-            monitors: ['guillaume@metadot.com', 'daniel@metadot.com']
+            monitors: ['guillaume@metadot.com', 'daniel@metadot.com', 
+            'cory@metadot.com']
           }
         }
       }).then(() => {
         return test.run().then((signal) => {
-          console.log("Got signal: " + signal);
+          console.log("Got signal: " + JSON.stringify(signal));
           return assert(signal === null || signal);
         }).catch(error => {
           return assert.fail("Got error: " + error);
