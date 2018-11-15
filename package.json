@@ -41,8 +41,8 @@
     "questions": [
       {
         "key": "monitors",
-        "label": "Emails",
-        "help": "Enter the email with , to separate them",
+        "label": "email",
+        "help": "Add one or multiple email to monitor",
         "required": true,
         "order": 1,
         "controlType": "textbox",
