@@ -13,9 +13,11 @@
   "authorName": "Das Keyboard team",
   "authorUrl": "https://twitter.com/daskeyboard",
   "issuesUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail/issues",
-  "homepage": "https://github.com/daskeyboard/daskeyboard-applet-gmail",
+  "homePageUrl": "https://github.com/daskeyboard/daskeyboard-applet-gmail",
   "licenseUrl": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
-  "changelogUrl": "",
+  "readMeUrl": "README.md",
+  "readMeEndUserUrl": "README_END_USER.md",
+  "changelogUrl": "CHANGELOG.md",
   "qActionUrl": "",
   "main": "index.js",
   "scripts": {
@@ -38,8 +40,7 @@
     "authorization": {
       "type": "oauth2"
     },
-    "questions": [
-      {
+    "questions": [{
         "key": "monitors",
         "label": "email",
         "help": "Add one or multiple email to monitor",
@@ -47,6 +48,14 @@
         "order": 1,
         "controlType": "textbox",
         "isArray": true
+      },
+      {
+        "key": "account",
+        "label": "gmail account",
+        "help": "The account that is used to track the emails",
+        "order": 2,
+        "controlType": "textbox",
+        "value": "MyGmailAccount"
       }
     ]
   },
