@@ -9,9 +9,14 @@ class GmailAlerts extends q.DesktopApp {
     this.pollingInterval = 60000;
   }
 
-  async run() {    
+  async run() {
     const apiKey = this.authorization.apiKey;
     const monitors = this.config.monitors;
+    let account = this.config.account;
+
+    if (!account || account.length === 0) {
+      account = 'Gmail account'
+    }
 
     if (!apiKey) {
       throw new Error("No apiKey available.");
@@ -31,9 +36,12 @@ class GmailAlerts extends q.DesktopApp {
       logger.info("Got body: " + JSON.stringify(json));
       if (json.messages && json.messages.length > 0) {
         logger.info("Got " + json.messages.length + " messages.");
-        return new q.Signal({ 
-          points: [[new q.Point("#00FF00")]],
-          name: `You have ${json.messages.length} unread messages.`,
+        return new q.Signal({
+          points: [
+            [new q.Point("#00FF00")]
+          ],
+          name: `${account}`,
+          message: `You have ${json.messages.length} unread messages.`,
         });
       } else {
         return null;
