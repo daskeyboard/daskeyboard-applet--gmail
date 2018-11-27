@@ -45,7 +45,7 @@
         "label": "email",
         "help": "Add one or multiple email to monitor",
         "required": true,
-        "order": 1,
+        "order": 2,
         "controlType": "textbox",
         "isArray": true
       },
@@ -53,7 +53,7 @@
         "key": "account",
         "label": "gmail account",
         "help": "The account that is used to track the emails",
-        "order": 2,
+        "order": 1,
         "controlType": "textbox",
         "value": "MyGmailAccount"
       }
