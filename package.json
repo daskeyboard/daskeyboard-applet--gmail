@@ -1,6 +1,6 @@
 {
   "name": "daskeyboard-applet--gmail",
-  "publisher": "Metadot Corporation",
+  "publisher": "Das Keyboard",
   "displayName": "Gmail",
   "version": "1.0.0",
   "description": "Das Keyboard Alerts for GMail",
@@ -9,7 +9,6 @@
   "developerRepoUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail",
   "officialProductName": "Gmail",
   "image": "assets/misssssssssssssssssssssssssing",
-  "publisherName": "Das Keyboard",
   "authorName": "Das Keyboard team",
   "authorUrl": "https://twitter.com/daskeyboard",
   "issuesUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail/issues",
@@ -51,7 +50,7 @@
       },
       {
         "key": "account",
-        "label": "gmail account",
+        "label": "Account name",
         "help": "The account that is used to track the emails",
         "order": 1,
         "controlType": "textbox",
