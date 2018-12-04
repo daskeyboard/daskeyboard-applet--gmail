@@ -45,8 +45,7 @@
     "questions": [
       {
         "key": "monitors",
-        "label": "Email monitors",
-        "help": "Add one or multiple email to monitor",
+        "label": "Notify each time a new email from the addresses listed bellow arrives",
         "required": true,
         "placeholder": "username@address.com",
         "order": 2,
@@ -55,12 +54,11 @@
       },
       {
         "key": "account",
-        "label": "Account Description",
+        "label": "Name this account",
         "order": 1,
         "required": true,
-        "placeholder": "Work Account",
-        "controlType": "textbox",
-        "value": "MyGmailAccount"
+        "placeholder": "Example: work account",
+        "controlType": "textbox"
       }
     ]
   },
