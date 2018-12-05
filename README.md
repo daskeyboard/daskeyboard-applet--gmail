@@ -1,14 +1,14 @@
 # Q Applet: GMAIL
 
-Illuminate any key of a Das Keyboard Q Series if you have unread emails from one or many email adresses.
+Notifies of new unread GMAIL messages on selected keys.
 
 [GitHub repository](https://github.com/daskeyboard/q-applet-gmail)
 
 ## Example
 
-GMAIL monitoring on key W and P:
+GMAIL on key W and P:
 
-![Gmail monitoring on a Das Keybaord Q](assets/simulator_preview.png "Q Gmail")
+![Gmail on a Das Keybaord Q](assets/simulator_preview.png "Q Gmail")
 
 ## Changelog
 
