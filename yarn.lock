@@ -3,9 +3,9 @@
 
 
 ajv@^6.5.5:
-  version "6.5.5"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.5.5.tgz#cf97cdade71c6399a92c6d6c4177381291b781a1"
-  integrity sha512-7q7gtRQDJSyuEHjuVgHoUa2VuemFiCMrfQc9Tc08XTAc4Zj/5U1buQJ0HU6i7fKjXU09SVgSmxa4sLvuvS8Iyg==
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.6.1.tgz#6360f5ed0d80f232cc2b294c362d5dc2e538dd61"
+  integrity sha512-ZoJjft5B+EJBjUyu9C9Hc0OZyPZSSlOF+plzouTrg6UlA8f+e/n8NIgBFG/9tppJtpPWfthHakK7juJdNDODww==
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -161,10 +161,10 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-daskeyboard-applet@^2.8.1:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/daskeyboard-applet/-/daskeyboard-applet-2.8.4.tgz#99a95953187451f5a6804645a1694323edcd7a25"
-  integrity sha512-glQNeFwH2q0jj1Nqb3r0orDuBAOmRQ7/sMibd/efhmCCtF6sm8vVY+dxHD9Upbz9rsolvJusjSezeG5O+XQSHw==
+daskeyboard-applet@^2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/daskeyboard-applet/-/daskeyboard-applet-2.9.1.tgz#dd1d24e6efd95618179263474a2254aad4a86dc1"
+  integrity sha512-zU3qSoapnGWEi7m5HNGxU1A8HhusZjc60YzTwc28ks/9abEogvlARVom3uVkuk2M4eJVSaVOZK7clF80JFlsVg==
   dependencies:
     moment "^2.22.2"
     node-localstorage "^1.3.1"
