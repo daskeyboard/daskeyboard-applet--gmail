@@ -3,7 +3,7 @@
   "publisher": "Das Keyboard",
   "displayName": "Gmail",
   "version": "1.0.0",
-  "description": "Das Keyboard Alerts for GMail",
+  "description": "Unread email notification",
   "longDescription": "Get emails alerts directly on a Das Keyboard Q device. Requires a Gmail account.",
   "icon": "assets/icon.png",
   "developerRepoUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail",
