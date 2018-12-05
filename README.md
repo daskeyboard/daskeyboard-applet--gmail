@@ -8,7 +8,7 @@ Notifies of new unread GMAIL messages on selected keys.
 
 GMAIL on key W and P:
 
-![Gmail on a Das Keybaord Q](assets/simulator_preview.png "Q Gmail")
+![Gmail on a Das Keybaord Q](assets/image.png "Q Gmail")
 
 ## Changelog
 
