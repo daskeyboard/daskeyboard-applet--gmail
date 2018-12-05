@@ -1,41 +1,55 @@
 const q = require('daskeyboard-applet');
 const logger = q.logger;
 
-const queryUrlBase = 'https://www.googleapis.com/gmail/v1/users/me/messages?q=';
+const queryUrlBase = 'https://www.googleapis.com/gmail/v1/users/me/messages';
+
+function getTimestamp() {
+  return Math.round(new Date().getTime() / 1000);
+}
 
 class GmailAlerts extends q.DesktopApp {
   constructor() {
     super();
     this.pollingInterval = 60000;
+    this.timestamp = getTimestamp();
   }
 
-  async run() {
+  async checkMessages() {
+    const timestamp = this.timestamp;
+    this.timestamp = getTimestamp();
+    logger.info(`Checking for monitored messages since ${timestamp}`);
+
     const apiKey = this.authorization.apiKey;
     const monitors = this.config.monitors;
-    let account = this.config.account;
-
-    if (!account || account.length === 0) {
-      account = 'Gmail account'
-    }
 
     if (!apiKey) {
       throw new Error("No apiKey available.");
     }
 
-    const query = `from:${monitors.join("+OR+")}+is:unread`;
-    logger.info("Query: " + query);
-
     const proxyRequest = new q.Oauth2ProxyRequest({
       apiKey: apiKey,
-      uri: queryUrlBase + query
+      uri: queryUrlBase,
+      qs: {
+        q: `from:${monitors.join(" OR ")} is:unread after: ${timestamp}`,
+      }
     });
 
     logger.info("Proxy request: " + JSON.stringify(proxyRequest));
 
-    return this.oauth2ProxyRequest(proxyRequest).then((json) => {
+    return this.oauth2ProxyRequest(proxyRequest);
+  }
+
+  async run() {
+    return this.checkMessages().then((json) => {
       logger.info("Got body: " + JSON.stringify(json));
       if (json.messages && json.messages.length > 0) {
         logger.info("Got " + json.messages.length + " messages.");
+
+        let account = this.config.account;
+        if (!account || account.length === 0) {
+          account = 'Gmail account'
+        }
+
         return new q.Signal({
           points: [
             [new q.Point("#00FF00")]
@@ -56,5 +70,6 @@ class GmailAlerts extends q.DesktopApp {
 const applet = new GmailAlerts();
 
 module.exports = {
+  getTimestamp: getTimestamp,
   GmailAlerts: GmailAlerts,
 }
