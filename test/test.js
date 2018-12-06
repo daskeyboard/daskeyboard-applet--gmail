@@ -1,6 +1,6 @@
 const assert = require('assert');
-const t = require('../index.js');
-const apiKey = require('./auth.json').apiKey;
+const t = require('../index');
+const apiKey = require('./auth.template.json').apiKey;
 
 describe('GmailAlerts', function () {
   describe('#constructor()', function () {
