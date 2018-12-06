@@ -18,6 +18,7 @@
   "readMeEndUserUrl": "README_END_USER.md",
   "changelogUrl": "CHANGELOG.md",
   "qActionUrl": "",
+  "isSingleton":false,
   "engines": {
     "das-keyboard-q": "3.1.x"
   },
