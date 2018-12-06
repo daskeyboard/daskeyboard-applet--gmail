@@ -22,6 +22,7 @@
   "engines": {
     "das-keyboard-q": "3.1.x"
   },
+  "das-q-runner":"3.1.0",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
