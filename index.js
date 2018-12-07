@@ -93,7 +93,11 @@ class GmailAlerts extends q.DesktopApp {
               [new q.Point("#00FF00")]
             ],
             name: `${account}`,
-            message: message
+            message: message,
+            link: {
+              url: 'https://mail.google.com',
+              label: 'Check in Gmail',
+            }
           });
         });
       } else {
