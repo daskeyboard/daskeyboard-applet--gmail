@@ -14,34 +14,71 @@ class GmailAlerts extends q.DesktopApp {
     this.timestamp = getTimestamp();
   }
 
+  /**
+   * For a given message, find the sender
+   * @param {*} message 
+   */
+  inspectSender(message) {
+    for (let header of message.payload.headers) {
+      if (header.name == 'From') {
+        return header.value;
+      }
+    }
+  }
+
   async checkMessages() {
     const timestamp = this.timestamp;
     this.timestamp = getTimestamp();
     logger.info(`Checking for monitored messages since ${timestamp}`);
 
-    const apiKey = this.authorization.apiKey;
     const monitors = this.config.monitors;
 
-    if (!apiKey) {
+    if (!this.authorization.apiKey) {
       throw new Error("No apiKey available.");
     }
 
     const proxyRequest = new q.Oauth2ProxyRequest({
-      apiKey: apiKey,
+      apiKey: this.authorization.apiKey,
       uri: queryUrlBase,
       qs: {
         q: `from:${monitors.join(" OR ")} is:unread after: ${timestamp}`,
       }
     });
 
-    logger.info("Proxy request: " + JSON.stringify(proxyRequest));
+    return this.oauth2ProxyRequest(proxyRequest);
+  }
+
+  async retrieveMessage(id) {
+    const proxyRequest = new q.Oauth2ProxyRequest({
+      apiKey: this.authorization.apiKey,
+      uri: `${queryUrlBase}/${id}`,
+      qs: {
+        fields: `payload/headers`,
+      }
+    });
 
     return this.oauth2ProxyRequest(proxyRequest);
   }
 
+  async generateSignalMessage(json) {
+    const senders = [];
+    for (let message of json.messages) {
+      const detail = await this.retrieveMessage(message.id);
+      const sender = this.inspectSender(detail).replace(/\s*?<.*/, '');
+      if (!senders.includes(sender)) {
+        senders.push(sender);
+      };
+    }
+
+    const lines = [];
+    for (let sender of senders.sort()) {
+      lines.push(`<div>New message from ${sender}</div>`);
+    }
+    return lines.join('\n');
+  }
+
   async run() {
     return this.checkMessages().then((json) => {
-      logger.info("Got body: " + JSON.stringify(json));
       if (json.messages && json.messages.length > 0) {
         logger.info("Got " + json.messages.length + " messages.");
 
@@ -50,12 +87,14 @@ class GmailAlerts extends q.DesktopApp {
           account = 'Gmail account'
         }
 
-        return new q.Signal({
-          points: [
-            [new q.Point("#00FF00")]
-          ],
-          name: `${account}`,
-          message: `You have ${json.messages.length} unread messages.`,
+        return this.generateSignalMessage(json).then(message => {
+          return new q.Signal({
+            points: [
+              [new q.Point("#00FF00")]
+            ],
+            name: `${account}`,
+            message: message
+          });
         });
       } else {
         return null;

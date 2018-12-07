@@ -31,6 +31,7 @@
     "daskeyboard-applet": "^2.9.1",
     "request-promise": "^4.2.2"
   },
+  "isSingleton": false,
   "qConfig": {
     "geometry": {
       "width": 1,
@@ -42,8 +43,7 @@
     "authorization": {
       "type": "oauth2"
     },
-    "questions": [
-      {
+    "questions": [{
         "key": "monitors",
         "label": "Notify each time a new email from the addresses listed bellow arrives",
         "required": true,

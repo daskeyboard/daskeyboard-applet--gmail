@@ -35,6 +35,27 @@ describe('GmailAlerts', function () {
     });
   });
 
+  describe('#generateMessage(messages)', function () {
+    const json = require('./test-response.json');
+    return buildApp().then(async app => {
+      const test = await app.generateSignalMessage(json);
+      assert.ok(test);
+      assert(test.includes('New message from Cory Kim'));
+    })
+  });
+
+  describe('#retrieveMessage(id)', function () {
+    it('should retrieve a message', async function () {
+      return buildApp().then(async (app) => {
+        return app;
+      }).then(app => {
+        return app.retrieveMessage('1677f507c6e5f39a')
+      }).then(message => {
+        assert.ok(message);
+      });
+    })
+  })
+
   describe('#run()', function () {
     it('should fail without an API key', async function () {
       let test = new t.GmailAlerts();

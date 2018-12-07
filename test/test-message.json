@@ -1,0 +1,71 @@
+{
+  "payload": {
+    "headers": [{
+      "name": "Delivered-To",
+      "value": "unit-tests@metadot.com"
+    }, {
+      "name": "Received",
+      "value": "by 2002:adf:afd0:0:0:0:0:0 with SMTP id y16csp4504766wrd;        Wed, 5 Dec 2018 09:00:40 -0800 (PST)"
+    }, {
+      "name": "X-Received",
+      "value": "by 2002:ac2:4116:: with SMTP id b22mr15507016lfi.19.1544029240932;    Wed, 05 Dec 2018 09:00:40 -0800 (PST)"
+    }, {
+      "name": "ARC-Seal",
+      "value": "i=1; a=rsa-sha256; t=1544029240; cv=none;        d=google.com; s=arc-20160816;        b=NokhUALD7MKVrIBnOyPWUjPropcZ3oplpw+LqpBGFEGQSfA9QbZE9mafoEzkadncWg         Zo9nPE76j7uxviKIz1B962ZurUDcypOkM544XpQ4Z62b/9pTyorI6+wiqUZKCNO7o1GE6PA0VT+INx/ptpeSOWA48bqOEvui8+/jpd313yBK4i1/3vRKCmtLv9mdRQBvnD7ZBYmq         grW0e1Zn/g4cz8+1M2QeRrWCYQvBKp6Aw81irqpqa16cSDZivV2PdHwChomZ89iRZPIL         rh0v/sJDWJkR2+8AfP6V/qH0o7ryAntEoCPq9P8zy4XlCJm8QEevMpIcoXNstipCAB98         leEA=="
+    }, {
+      "name": "ARC-Message-Signature",
+      "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;        h=to:subject:message-id:date:from:mime-version:dkim-signature;        bh=W7V7Tn/4IhABBaIZGKPlzyrHV0KkfnHRrdGrj5sC99o=;        b=U6An+okfwgX2fpYyGorVWwAKFAoB7/vKdlURsNQ3awksZvymzwjWKH503KJTJvorQx         D8anFxg7TunxVb6i3X5BeL1Tjq5jPWPvLW9r0Ogs4Az1W2Tq1i5Pi4VHYDwlIaiwXW5T         8p9zElfNW4XjHrqIbj/Z0eJtYlV3HGVruziFzzoLkR9gs/Hhp3BS1kwPvUPYSsp77r0z         fIMVnHNN/IPfMWdz1vRpTKsUoq5JAzZLZAnKUtc6LuBe9ouU6DiUDLSQg/OH0ZuhBwUw         hIrpPwX4d8hbklz1q8bJ33Zr6JKfXqXWKZ29Ma9B1Yk4NsVwhbpISISfjelp2wUbwa3v         qAiw=="
+    }, {
+      "name": "ARC-Authentication-Results",
+      "value": "i=1; mx.google.com;       dkim=pass header.i=@metadot-com.20150623.gappssmtp.com header.s=20150623 header.b=xNeUXRQe;      spf=softfail (google.com: domain of transitioning cory@metadot.com does not designate 209.85.220.41 as permitted sender) smtp.mailfrom=cory@metadot.com"
+    }, {
+      "name": "Return-Path",
+      "value": "<cory@metadot.com>"
+    }, {
+      "name": "Received",
+      "value": "from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])       by mx.google.com with SMTPS id e11-v6sor12492709ljg.24.2018.12.05.09.00.40        for <unit-tests@metadot.com>        (Google Transport Security);        Wed, 05 Dec 2018 09:00:40 -0800 (PST)"
+    }, {
+      "name": "Received-SPF",
+      "value": "softfail (google.com: domain of transitioning cory@metadot.com does not designate 209.85.220.41 as permitted sender) client-ip=209.85.220.41;"
+    }, {
+      "name": "Authentication-Results",
+      "value": "mx.google.com;       dkim=pass header.i=@metadot-com.20150623.gappssmtp.com header.s=20150623 header.b=xNeUXRQe;       spf=softfail (google.com: domain of transitioning cory@metadot.com does not designate209.85.220.41 as permitted sender) smtp.mailfrom=cory@metadot.com"
+    }, {
+      "name": "DKIM-Signature",
+      "value": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=metadot-com.20150623.gappssmtp.com; s=20150623;        h=mime-version:from:date:message-id:subject:to;        bh=W7V7Tn/4IhABBaIZGKPlzyrHV0KkfnHRrdGrj5sC99o=;   b=xNeUXRQex0M6o++gbI0SK5b5uVPgB3Ml+DVfo067sHxSqtN7kfofd4yXzI7TwZRpBl         a2OMOwo7xOtIkcG2s0JXyHJc1BnjWTk9y/pJQ60UIFjWp5t5Ol/seNFRtQnSxekwhaHW         u3VG8304Y0+u7W8rNIumtUEeF6fQjnqO25j1INN5B9/SA0hyzSrUbi/146ofL7tn7ogm         elAG+tz0SgOZXlgqAI80dZ7i7++BVKwQQZS4ewixuU5COsBB7X2VGdwio2SYAj+kFL58         BT85+8zJGAUjI+1QYH55sKFA3RoJU4W0RmkVvK/mVD7m2FT3UcgWOvr2sQ+Veuow6zBj         P9vA=="
+    }, {
+      "name": "X-Google-DKIM-Signature",
+      "value": "v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20161025;        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;        bh=W7V7Tn/4IhABBaIZGKPlzyrHV0KkfnHRrdGrj5sC99o=;        b=DoSaILxmxmo9XLXERQWh5F0DOxfovX83bf6CgbLUDbO73SZm5rQNiexjrhWafrS8fw         pniU4663q3B14PFA2awHUPeV14PHyqCAKrlN2zdBXlZfJxFmg7NTNXndZUsLSaePZwTj         wD7NIzvh+rn19Ibj74zvZEML+nOkD3vAJympPFoBZU6vMwe8wy0uYYeUPGcn93C/ssVg         Scb0UUZE+xT3gRuXArVCidXm9ChcLW5tex3skM6qn+kuY5MABqBywZHViObVKqBkHS5X         vZvLOre9AYVCNyM8ZbvXnOyr1CwcurtO3+TdyAmxuVgeie88a2JrP59r0ge+LYZ0ANrt         Dd2g=="
+    }, {
+      "name": "X-Gm-Message-State",
+      "value": "AA+aEWbh00a8CoXqUkNLfMxqZ+raMIPd7WTbdDHRXgH0BYIKYwZxfK/4 Dq5ruHvi9KSqy7ozLs7eH5XG7uPW9j6xMW4u8R9amT9jbUEPUw=="
+    }, {
+      "name": "X-Google-Smtp-Source",
+      "value": "AFSGD/XvnApo74IcjjdwKr5/09te5svumcotubrKVqQgsyr/z/GGxIQd6MYToUHni/AB7o3buG0TLi6tV8mWFT5lue8="
+    }, {
+      "name": "X-Received",
+      "value": "by 2002:a2e:7c13:: with SMTP id x19-v6mr16361107ljc.83.1544029239918; Wed, 05 Dec 2018 09:00:39 -0800 (PST)"
+    }, {
+      "name": "MIME-Version",
+      "value": "1.0"
+    }, {
+      "name": "From",
+      "value": "Cory Kim <cory@metadot.com>"
+    }, {
+      "name": "Date",
+      "value": "Wed, 5 Dec 2018 11:00:28 -0600"
+    }, {
+      "name": "Message-ID",
+      "value": "<CAKWsSzD6yOCQgJmrgPCH=zMSiMxuNfpLDcaEYCBsCpM2hcJS7A@mail.gmail.com>"
+    }, {
+      "name": "Subject",
+      "value": "test 001"
+    }, {
+      "name": "To",
+      "value": "unit-tests@metadot.com"
+    }, {
+      "name": "Content-Type",
+      "value": "multipart/alternative; boundary=\"0000000000005e5e9e057c49520c\""
+    }]
+  }
+}
