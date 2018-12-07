@@ -1,4 +1,4 @@
-# Changelog Q Applet GMAIL
+# Changelog Q Applet Gmail
 
 ## Version 1.0.0 - December 5, 2018
 
