@@ -1,6 +1,6 @@
-# GMAIL
+# Gmail
 
-Notifies of new unread GMAIL messages on selected keys.
+Notifies of new unread Gmail messages on selected keys.
 
 Example on key W and P:
 
