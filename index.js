@@ -56,6 +56,10 @@ class GmailAlerts extends q.DesktopApp {
           ],
           name: `${account}`,
           message: `You have ${json.messages.length} unread messages.`,
+          link: {
+            url: 'https://mail.google.com',
+            label: 'Check in Gmail',
+          }
         });
       } else {
         return null;
