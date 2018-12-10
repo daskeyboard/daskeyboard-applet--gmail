@@ -8,7 +8,7 @@
   "icon": "assets/icon.png",
   "developerRepoUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail",
   "officialProductName": "Gmail",
-  "image": "assets/misssssssssssssssssssssssssing",
+  "image": "assets/image-missing.png",
   "authorName": "Das Keyboard",
   "authorUrl": "https://twitter.com/daskeyboard",
   "issuesUrl": "https://github.com/daskeyboard/daskeyboard-applet--gmail/issues",
@@ -35,9 +35,6 @@
     "geometry": {
       "width": 1,
       "height": 1
-    },
-    "applet": {
-      "defaults": {}
     },
     "authorization": {
       "type": "oauth2"
