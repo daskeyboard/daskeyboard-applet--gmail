@@ -39,7 +39,8 @@
     "authorization": {
       "type": "oauth2"
     },
-    "questions": [{
+    "questions": [
+      {
         "key": "monitors",
         "label": "Notify each time a new email from the addresses listed bellow arrives",
         "required": true,
