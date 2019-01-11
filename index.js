@@ -90,7 +90,7 @@ class GmailAlerts extends q.DesktopApp {
         return this.generateSignalMessage(json).then(message => {
           return new q.Signal({
             points: [
-              [new q.Point("#00FF00")]
+              [new q.Point("#0000FF",q.Effects.BLINK)]
             ],
             name: `${account}`,
             message: message,
