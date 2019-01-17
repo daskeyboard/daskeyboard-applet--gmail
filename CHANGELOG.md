@@ -8,3 +8,7 @@ First release
 
 New image added.
 README and Package.json updated.
+
+## Version 1.1.1 - January 17, 2019
+
+Description content and image updated.

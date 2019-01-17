@@ -2,4 +2,4 @@
 
 Notifies of new unread Gmail messages on selected keys.
 
-![Gmail on a Das Keybaord Q](assets/image.png "Q Gmail")
+![Gmail applet on a Das Keybaord Q](assets/image.png "Das Keyboard Gmail applet")

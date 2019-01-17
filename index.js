@@ -90,13 +90,13 @@ class GmailAlerts extends q.DesktopApp {
         return this.generateSignalMessage(json).then(message => {
           return new q.Signal({
             points: [
-              [new q.Point("#0000FF",q.Effects.BLINK)]
+              [new q.Point("#00BFFF", q.Effects.BLINK)]
             ],
             name: `${account}`,
             message: message,
             link: {
               url: 'https://mail.google.com',
-              label: 'Check in Gmail',
+              label: 'Open in Gmail',
             }
           });
         });
