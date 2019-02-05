@@ -2,7 +2,7 @@
   "name": "daskeyboard-applet--gmail",
   "publisher": "Das Keyboard",
   "displayName": "Gmail",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Notifies when key senders emails just arrived.",
   "longDescription": "Get emails alerts directly on a Das Keyboard Q device. Requires a Gmail account.",
   "icon": "assets/icon.png",
@@ -27,7 +27,7 @@
   "author": "Cory Kim",
   "license": "MIT",
   "dependencies": {
-    "daskeyboard-applet": "2.10.6",
+    "daskeyboard-applet": "2.11.3",
     "request-promise": "^4.2.2"
   },
   "isSingleton": false,
