@@ -1,3 +1,9 @@
+#### 1.1.2 (2019-02-05)
+
+##### Bug Fixes
+
+* **Request:**  Requests will use daskeyboard proxy only to ask for new tokens ([06708278](https://github.com/corykim/q-applet-gmail/commit/067082783f75a223fd03c89517b1af821fefaf14))
+
 # Changelog Q Applet Gmail
 
 ## Version 1.0.0 - December 5, 2018
