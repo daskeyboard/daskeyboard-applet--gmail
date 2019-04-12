@@ -143,6 +143,7 @@ class GmailAlerts extends q.DesktopApp {
   }
 
   async run() {
+    logger.info("Gmail running.");
     return this.checkMessages().then((json) => {
       if (json.messages && json.messages.length > 0) {
         logger.info("Got " + json.messages.length + " messages.");
@@ -170,7 +171,15 @@ class GmailAlerts extends q.DesktopApp {
       }
     }).catch((error) => {
       logger.error(`Error while getting mail: ${error} `);
-      throw new Error("Error retrieving email.");
+      if(`${error.message}`.includes("getaddrinfo")){
+        return q.Signal.error(
+          'The Gmail service returned an error. <b>Please check your internet connection</b>.'
+        );
+      }
+      return q.Signal.error([
+        'The Gmail service returned an error. <b>Please check your account</b>.',
+        `Detail: ${error.message}`
+      ]);
     });
   }
 }
