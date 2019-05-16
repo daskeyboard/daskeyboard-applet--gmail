@@ -15,7 +15,7 @@ Notifies of new unread Gmail messages on selected keys.
 Requires a Das Keyboard Q series: www.daskeyboard.com
 
 Installation, configuration and uninstallation of applets is done within
-the Q Desktop application (https://www.daskeyboard.com/q)
+the Q Desktop application (<https://www.daskeyboard.com/q>)
 
 ## Running tests
 
@@ -33,7 +33,7 @@ Licensed under the GNU General Public License Version 2.0 (or later);
 you may not use this work except in compliance with the License.
 You may obtain a copy of the License in the LICENSE file, or at:
 
-   http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+   <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
