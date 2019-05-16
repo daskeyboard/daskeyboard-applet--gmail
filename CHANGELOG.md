@@ -1,3 +1,10 @@
+#### 1.1.4 (2019-05-16)
+
+##### Bug Fixes
+
+* Removed internet connection error signal.
+* Corrected linter.
+
 #### 1.1.3 (2019-04-12)
 
 ##### Bug Fixes
