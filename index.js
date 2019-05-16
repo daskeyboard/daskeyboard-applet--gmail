@@ -172,14 +172,16 @@ class GmailAlerts extends q.DesktopApp {
     }).catch((error) => {
       logger.error(`Error while getting mail: ${error} `);
       if(`${error.message}`.includes("getaddrinfo")){
-        return q.Signal.error(
-          'The Gmail service returned an error. <b>Please check your internet connection</b>.'
-        );
+        // Do not send error signal when getting internet connection error
+        // return q.Signal.error(
+        //   'The Gmail service returned an error. <b>Please check your internet connection</b>.'
+        // );
+      }else{
+        return q.Signal.error([
+          'The Gmail service returned an error. <b>Please check your account</b>.',
+          `Detail: ${error.message}`
+        ]);
       }
-      return q.Signal.error([
-        'The Gmail service returned an error. <b>Please check your account</b>.',
-        `Detail: ${error.message}`
-      ]);
     });
   }
 }
