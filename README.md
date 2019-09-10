@@ -1,10 +1,10 @@
-# Q Applet: Gmail
+# Q Applet: Q alerts for Gmail
 
 Notifies of new unread Gmail messages on selected keys.
 
 [GitHub repository](https://github.com/daskeyboard/q-applet-gmail)
 
-![Gmail applet on a Das Keybaord Q](assets/image.png "Das Keyboard Gmail applet")
+![Q alerts for Gmail applet on a Das Keybaord Q](assets/image.png "Das Keyboard Q alerts for Gmail applet")
 
 ## Changelog
 
