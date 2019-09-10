@@ -1,3 +1,9 @@
+#### 2.0.0 (2019-09-10)
+
+##### Bug Fixes
+
+*  updated applet name to comply with google requirements
+
 #### 1.1.4 (2019-05-16)
 
 ##### Bug Fixes
