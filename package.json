@@ -2,7 +2,7 @@
   "name": "daskeyboard-applet--gmail",
   "publisher": "Das Keyboard",
   "displayName": "Q alerts for Gmail",
-  "version": "2.0.0",
+  "version": "1.1.5",
   "description": "Notifies when key senders emails just arrived.",
   "longDescription": "Get emails alerts directly on a Das Keyboard Q device. Requires a Gmail account.",
   "icon": "assets/icon.png",
